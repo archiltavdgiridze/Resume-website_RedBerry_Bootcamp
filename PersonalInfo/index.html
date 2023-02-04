@@ -31,7 +31,7 @@
           <div class="PI_form">
             <form action="">
               <div class="nameSurname">
-                <div class="form_name">
+                <div class="form_name inp_el">
                   <label for="name">სახელი</label>
                   <input
                     type="text"
@@ -41,7 +41,7 @@
                   />
                   <p>მინიმუმ 2 ასო, ქართული ასოები</p>
                 </div>
-                <div class="form_surname">
+                <div class="form_surname inp_el">
                   <label for="surname">გვარი</label>
                   <input
                     type="text"
@@ -60,7 +60,7 @@
                   <!-- <input type="file" name="photo" id="photo" /> -->
                 </label>
               </div>
-              <div class="about_myself">
+              <div class="about_myself inp_el">
                 <label for="about_myself">ჩემს შესახებ (არასავალდებულო)</label>
                 <textarea
                   name="about_myself"
@@ -70,16 +70,28 @@
                   placeholder="ზოგადი ინფო შენს შესახებ"
                 ></textarea>
               </div>
-              <div class="personal_info_form_bottom_left">
+              <div class="form_mail inp_el">
                 <label for="email">ელ.ფოსტა</label>
-                <input type="email" name="email" id="email" />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="youremail@redberry.ge"
+                />
+                <p>უნდა მთავრდებოდეს @redberry.ge–ით</p>
               </div>
-              <div class="personal_info_form_bottom_right">
+              <div class="form_mobile inp_el">
                 <label for="phone">ტელეფონი</label>
-                <input type="tel" name="phone" id="phone" />
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="+995 500 12 34 56"
+                />
+                <p>უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</p>
               </div>
-              <div class="personal_info_form_submit">
-                <button type="submit">შენახვა</button>
+              <div class="form_submit">
+                <button type="submit">შემდეგი</button>
               </div>
             </form>
           </div>
