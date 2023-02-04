@@ -5,10 +5,11 @@
 
 :root {
   --pureBlack: #000;
-  --blackish: #2E2E2E;
+  --blackish: #a6a6a6;
   --pureWhite: #fff;
   --grayish: #f9f9f9;
   --blueish: #0E80BF;
+  --borderGray: #BCBCBC;
   --helvetica: "HelveticaNeue", sans-serif;
 }
 
@@ -34,7 +35,7 @@ body {
   padding: 24px 0 0 70px;
 }
 
-.main_page_container hr {
+.main_page_top hr {
   width: 93%;
   border: 1px solid #000;
 }
@@ -82,7 +83,7 @@ body {
 .resume_btn:hover {
   background-color: #fff;
   color: #000;
-  transition: 0.3s;
+  transition: 0.2s;
   transition-timing-function: ease-in;
   border: 1px solid #000;
 }
@@ -93,22 +94,23 @@ body {
 #personal_info_container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   height: 100vh;
 }
 
 .personal_info_left {
-  width: 60%;
-  height: 100vh;
-  background-color: var(--grayish);
   display: flex;
+  width: 60%;
+  height: auto;
+  /* height: fit-content; */
+  /* background-color: red; */
+  background-color: var(--grayish);
 }
 
 .back_to_mainPage {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   width: 10%;
   height: fit-content;
   padding: 45px 0 0 0;
@@ -127,9 +129,9 @@ body {
 }
 
 .personal_info_form {
-  width: 85%;
+  width: 80%;
   padding: 45px 0 0 0;
-  margin: 0 auto;
+  margin: 0 30px 0 15px;
 }
 
 .personal_info_title {
@@ -137,15 +139,12 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  /* padding: 0 30px 0; */
   font-size: 1.1rem;
   font-family: var(--helvetica);
   font-weight: bold;
 }
 
 .personal_info_form hr {
-  width: 90%;
   border: 1px solid #000;
   margin-block-start: 0em;
   margin: 0 0 70px 0;
@@ -166,15 +165,14 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  /* padding: 0 30px 0; */
+  width: 100%;
   margin: 0 0 46px 0;
   font-family: var(--helvetica);
-  /* font-weight: bolder; */
 }
 
 .form_name,
 .form_surname {
+  width: 45%;
   display: flex;
   flex-direction: column;
 }
@@ -186,17 +184,36 @@ body {
   margin: 0 0 8px 0;
 }
 
-#name,
-#surname {
-  width: 370px;
+/* ~ input style */
+input {
   height: 48px;
+  border: 1px solid var(--borderGray);
   border-radius: 4px;
   margin: 0 0 8px 0;
 }
 
+/* ~ */
+
+#name,
+#surname {
+  /* border: 1px solid var(--borderGray);
+  border-radius: 4px;
+  margin: 0 0 8px 0; */
+}
+
+.form_name input[type=text],
+select,
+.form_surname input[type=text],
+select {
+  padding: 0 0 0 1rem;
+  font-size: 1rem;
+  font-family: var(--helvetica);
+}
+
+
 .form_name ::placeholder,
 .form_surname ::placeholder {
-  padding: 1rem;
+  /* padding: 1rem; */
   font-size: 1rem;
   font-family: var(--helvetica);
   color: var(--blackish);
@@ -204,17 +221,13 @@ body {
 
 .form_name p,
 .form_surname p {
+  color: var(--blackish);
   margin-block-start: 0em;
 }
-
-
-
-.form_surname {}
 
 .upload_photo {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
   align-items: center;
   font-family: var(--helvetica);
   margin: 0 0 50px 0;
@@ -233,7 +246,6 @@ body {
   margin: 0 0 0 20px;
   padding: 4px 16px 6px;
   border-radius: 6px;
-  /* font-weight: 100; */
   color: var(--pureWhite);
   background-color: var(--blueish);
 }
@@ -242,10 +254,37 @@ body {
   display: none;
 }
 
-.about_myself {}
+.about_myself {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 50px 0;
+}
+
+.about_myself label {
+  font-size: 1rem;
+  font-weight: bolder;
+  font-family: var(--helvetica);
+  margin: 0 0 8px 0;
+}
+
+.about_myself textarea {
+  height: 100px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: var(--helvetica);
+  border: 1px solid var(--borderGray);
+  border-radius: 4px;
+  resize: none;
+}
 
 .personal_info_form_bottom_left {}
 
 .personal_info_form_bottom_right {}
 
 .personal_info_form_submit {}
+
+.personal_info_right {
+  width: 40%;
+  height: auto;
+  background-color: green;
+}
