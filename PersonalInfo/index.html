@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="../Assets/homepage/redberry-title-logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../Assets/global/styles.css" />
+    <title>Personal info</title>
+  </head>
+  <body>
+    <div id="personal_info_container">
+      <div class="personal_info_left">
+        <div class="back_to_mainPage">
+          <a href="../HomePage/index.html">
+            <button>
+              <img src="../Assets/personalInfo/back-button-vector.png" alt="" />
+            </button>
+          </a>
+        </div>
+        <div class="personal_info_form">
+          <div class="personal_info_title">
+            <h2>პირადი ინფორმაცია</h2>
+            <p>1 / 3</p>
+          </div>
+          <hr />
+          <div class="PI_form">
+            <form action="">
+              <div class="nameSurname">
+                <div class="form_name">
+                  <label for="name">სახელი</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="ანზორ"
+                  />
+                  <p>მინიმუმ 2 ასო, ქართული ასოები</p>
+                </div>
+                <div class="form_surname">
+                  <label for="surname">გვარი</label>
+                  <input
+                    type="text"
+                    name="surname"
+                    id="surname"
+                    placeholder="მუმლაძე"
+                  />
+                  <p>მინიმუმ 2 ასო, ქართული ასოები</p>
+                </div>
+              </div>
+              <div class="upload_photo">
+                <p for="photo" class="photo_title">პირადი ფოტოს ატვირთვა</p>
+                <label for="uploadPhoto" class="upload_btn">
+                  ატვირთვა
+                  <input id="uploadPhoto" type="file" name="photo" id="photo"/>
+                  <!-- <input type="file" name="photo" id="photo" /> -->
+                </label>
+              </div>
+              <div class="about_myself">
+                <label for="about_myself">ჩემს შესახებ</label>
+                <textarea
+                  name="about_myself"
+                  id="about_myself"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+              <div class="personal_info_form_bottom_left">
+                <label for="email">ელ.ფოსტა</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div class="personal_info_form_bottom_right">
+                <label for="phone">ტელეფონი</label>
+                <input type="tel" name="phone" id="phone" />
+              </div>
+              <div class="personal_info_form_submit">
+                <button type="submit">შენახვა</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="personal_info_right"></div>
+    </div>
+  </body>
+</html>
