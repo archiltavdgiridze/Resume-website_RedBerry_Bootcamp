@@ -8,6 +8,7 @@
   --blackish: #a6a6a6;
   --pureWhite: #fff;
   --grayish: #f9f9f9;
+  --hrGray: #C1C1C1;
   --blueish: #0E80BF;
   --lightblue: #62a1eb;
   --purple: #6B40E3;
@@ -101,6 +102,12 @@ button {
 
 .top_line hr {
   border: 1px solid #000;
+  margin-block-start: 0em;
+  margin: 0 0 70px 0;
+}
+
+.bottom_line {
+  border: 1px solid var(--hrGray);
   margin-block-start: 0em;
   margin: 0 0 70px 0;
 }
@@ -358,7 +365,7 @@ p {
 .start_date,
 .end_date {
   width: 45%;
-  
+
 }
 
 .start_date {}
