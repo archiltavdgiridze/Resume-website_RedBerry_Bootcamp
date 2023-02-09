@@ -29,7 +29,7 @@
           </div>
           <hr class="top_line"/>
           <div class="PI_form">
-            <form action="">
+            <form id="personal_info_form" action="../Experience/experience.html">
               <div class="nameSurname">
                 <div class="form_name inp_el">
                   <label for="name">სახელი</label>
@@ -38,6 +38,8 @@
                     name="name"
                     id="name"
                     placeholder="ანზორ"
+                    minlength="2"
+                    onsubmit="return validateForm()"
                   />
                   <p>მინიმუმ 2 ასო, ქართული ასოები</p>
                 </div>
@@ -48,6 +50,7 @@
                     name="surname"
                     id="surname"
                     placeholder="მუმლაძე"
+                    minlength="2"
                   />
                   <p>მინიმუმ 2 ასო, ქართული ასოები</p>
                 </div>
@@ -77,6 +80,8 @@
                   name="email"
                   id="email"
                   placeholder="youremail@redberry.ge"
+                  pattern=".+@redberry.ge"
+                  title="E-mail shoud end with @redberry.ge"
                 />
                 <p>უნდა მთავრდებოდეს @redberry.ge–ით</p>
               </div>
@@ -87,19 +92,22 @@
                   name="phone"
                   id="phone"
                   placeholder="+995 500 12 34 56"
+                  pattern="^\+?995\s?5\d{2}\s?\d{2}\s?\d{2}\s?\d{2}$", 
+                  pattern="^\+?995\s?5\d{2}\s?\d{3}\s?\d{3}$"
                 />
                 <p>უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</p>
               </div>
+              <div class="nav_btns next_btn">
+                <a href="../Experience/experience.html">
+                  <button>შემდეგი</button>
+                </a>
+              </div>
             </form>
-            <div class="nav_btns next_btn">
-              <a href="../Experience/experience.html">
-                <button>შემდეგი</button>
-              </a>
-            </div>
           </div>
         </div>
       </div>
       <div class="personal_info_right"></div>
     </div>
+    <script src="./personalInfo.js"></script>
   </body>
 </html>
